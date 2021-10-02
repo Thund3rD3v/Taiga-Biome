@@ -1,0 +1,148 @@
+/*imports*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./images/taiga-background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-title {
+  -webkit-text-stroke: 1px black;
+  font-size: 54px;
+  font-weight: bolder;
+  color: white;
+  animation: slide-left 1.5s ease;
+  opacity: 0.9;
+}
+
+.container {
+  width: 40%;
+
+  padding: 15px 15px;
+  background: #d4ecee;
+  opacity: 0.9;
+  filter: blur(0.25px);
+  border-radius: 5px;
+  border: 1.5px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slide-down-trans 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@media only screen and (max-width: 965px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  .container {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 75%;
+  }
+}
+
+.main-container ul {
+  color: #096b82;
+  animation: slide-down 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.carousel-titles {
+  font-size: 32px;
+  color: #096b82;
+  text-align: center;
+  animation: slide-up 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.carousel-items {
+  color: #096b82;
+  text-align: center;
+
+  animation: slide-down 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+/*buttons*/
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#up-button {
+  background: none;
+  border: none;
+  color: #096b82;
+}
+
+#down-button {
+  background: none;
+  border: none;
+  color: #096b82;
+}
+
+@keyframes slide-down-trans {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(5vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(-5vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(10vh);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+}
